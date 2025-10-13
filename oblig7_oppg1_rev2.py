@@ -1,0 +1,44 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Oct 13 17:17:43 2025
+
+@author: madsj
+"""
+
+# --- Oppgave 1: Registrer emner ---
+
+emnekode = []
+semester = []
+studiepoeng = []
+
+print("=== Registrering av emner ===")
+print("Skriv 'stopp' som emnekode for å avslutte.\n")
+
+while True:
+    kode = input("Skriv inn emnekode: ").upper()
+
+    # Avslutt hvis brukeren skriver 'stopp'
+    if kode == "STOPP":
+        break
+
+    # Sjekk om emnet finnes fra før
+    if kode in emnekode:
+        print(" Dette emnet finnes allerede. Prøv igjen.\n")
+        continue
+
+    sem = input("Hvilket semester undervises emnet (høst/vår): ").lower()
+    poeng = int(input("Antall studiepoeng: "))
+
+    # Legg til i listene
+    emnekode.append(kode)
+    semester.append(sem)
+    studiepoeng.append(poeng)
+
+    print(f" Emnet {kode} ({poeng} stp, {sem}) er lagt til.\n")
+
+# Etter brukeren avslutter, vis alle emner
+print("\n--- Registrerte emner ---")
+for i in range(len(emnekode)):
+    print(f"{emnekode[i]} - {semester[i]} - {studiepoeng[i]} stp")
+
+print("\nProgrammet er avsluttet.")
