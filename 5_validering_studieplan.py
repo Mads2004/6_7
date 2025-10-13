@@ -26,9 +26,6 @@ def gyldighet_studieplan(emnekoder: List[str],
 def sjekk_og_skriv_gyldighet(emnekoder: List[str],
                              studiepoeng: List[int],
                              plan: List[List[int]]) -> None:
-    """
-    Sjekker gyldighet og skriver status.
-    """
     gyldig, avvik = gyldighet_studieplan(emnekoder, studiepoeng, plan)
     if gyldig:
         print("\n Studieplanen er gyldig: Alle 6 semestre har 30 studiepoeng.")
