@@ -2,7 +2,7 @@
 """
 Created on Mon Oct 13 15:41:23 2025
 
-@author: simen
+@author: Simen,Ole,Mads,Jan Ståle
 """
 from oppg1 import oppgave1
 from oppg2 import oppgave2
@@ -41,7 +41,8 @@ def valg_1():#Good
     emnekode, semester, studiepoeng = oppgave1(emnekode, semester, studiepoeng)
     velger()
 def valg_2(): #good
-    oppgave2()
+    global studieplan
+    studieplan = oppgave2(emnekode, semester, studiepoeng, studieplan)
     velger()
 def valg_3(): #Good
     oppgave3()
