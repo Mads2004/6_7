@@ -44,10 +44,4 @@ def oppgave1(emnekode, semester, studiepoeng):
         print(f"{emnekode[i]} - {semester[i]} - {studiepoeng[i]} stp")
     
     print("\nProgrammet er avsluttet.")
-    
     return emnekode, semester, studiepoeng
-
-oppgave1(emnekode, semester, studiepoeng)
-print(emnekode)
-print(semester)
-print(studiepoeng)

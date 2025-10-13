@@ -9,10 +9,10 @@ from oppg2 import oppgave2
 from oppg4 import oppgave4
 from oppg5 import oppgave5 
 
-emnekode
-semester
-studiepoeng
-studieplan
+emnekode = []
+semester = []
+studiepoeng = []
+studieplan = []
 
 menytekst = """
 1. Lag et nytt emne
@@ -24,17 +24,10 @@ menytekst = """
 7. Les inn studieplan og emner fra fil
 8. Avslutt programm
 """
-
-print(menytekst)
-
-
                 
 def oppgave3():
-    print 
+    print(emnekode)
     
-    
-
-
 def oppgave7():
     try:
         with open ("studiestuff.txt", "r") as fil:
@@ -43,24 +36,29 @@ def oppgave7():
     except FileNotFoundError:
         print("filen finnes ikke")
     
-def valg_1():#good
-    oppgave1()
+def valg_1():#Good
+    global emnekode,semester, studiepoeng
+    emnekode, semester, studiepoeng = oppgave1(emnekode, semester, studiepoeng)
+    velger()
 def valg_2(): #good
     oppgave2()
-def valg_3():
+    velger()
+def valg_3(): #Good
     oppgave3()
-    print("v3")
+    velger()
 def valg_4():
     oppgave4()
-    print("v4")
+    velger()
 def valg_5():
     oppgave5()
-    print("v5")
+    velger()
 def valg_6():
     #open
     print("v6")
-def valg_7(): #good
+    velger()
+def valg_7(): #Good
     oppgave7()
+    velger()
 def valg_8():#good
     print("Avslutter")
 
@@ -77,10 +75,15 @@ menyvalg_funksjoner = {
 }
 
 # Eksempel på bruk
-menyvalg = int(input("Velg et alternativ (1-8): "))
+def velger():
+    print(menytekst)
+    menyvalg = int(input("Velg et alternativ (1-8): "))
+    
+    funksjon = menyvalg_funksjoner.get(menyvalg)
+    if funksjon:
+        funksjon()
+    else:
+        print("Ugyldig valg. Prøv igjen.")
 
-funksjon = menyvalg_funksjoner.get(menyvalg)
-if funksjon:
-    funksjon()
-else:
-    print("Ugyldig valg. Prøv igjen.")
+velger()
+
