@@ -1,5 +1,5 @@
 from typing import List, Tuple
-# ---------- Utskrift av studieplan (Oppgave 4) ----------
+
 
 def skriv_ut_studieplan(emnekoder: List[str],
                         semestre: List[str],
