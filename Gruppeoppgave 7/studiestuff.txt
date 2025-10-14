@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 Emner
 - matte
 - norsk
@@ -5,3 +6,13 @@ Emner
 - naturfag
 - historie
 - kroppsøving
+=======
+Studieplan   Emner
+
+Semester 1| ['ELE100']
+Semester 2| []
+Semester 3| []
+Semester 4| []
+Semester 5| []
+Semester 6| []
+>>>>>>> Stashed changes
